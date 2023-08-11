@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/video.css">
+<link rel="stylesheet" href="css/news.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+       
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background: #000;" >
+    <header class="header-sticky scroled">
+ 
+        <nav class="navbar  navbar-expand-lg navbar-dark fixed-top nav-fixed nav-active" >
+          
+            <div class="container">
+              <img src="imgas/nasalogo.png" width="150px" height="auto" alt="">
+                
+         
+               
+              <nav class="navbar  navbar-expand-lg navbar-dark fixed-top nav-fixed nav-active" >
+      
+                <div class="container">
+                  <img src="imgas/nasalogo.png" width="150px" height="auto" alt="">
+                  <div id="sideNav">
+                    <nav>
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li><a href="news.html">News</a></li>
+                          <li><a href="gallery.html">Images</a></li>
+                          <li><a href="video.html">Videos</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="menuBtn">
+                    <img src="https://i.postimg.cc/j5RRCtb2/menu.png" id="menu">
+                </div>
+                <script>        var menuBtn = document.getElementById("menuBtn")
+                  var sideNav = document.getElementById("sideNav")
+                  var menu = document.getElementById("menu")
+                  sideNav.style.right == "-250px";
+                  menuBtn.onclick = function() {
+                      if (sideNav.style.right == "-250px") {
+                          sideNav.style.right = "0";
+                          menu.src = "https://i.postimg.cc/cJRss6PP/close.png";
+                      } else {
+                          sideNav.style.right = "-250px";
+                          menu.src = "https://i.postimg.cc/j5RRCtb2/menu.png";
+                      }
+                  }
+          
+                  $(document).ready(function() {
+          
+                      $("a").on('click', function(event) {
+          
+                          if (this.hash !== "") {
+          
+                              event.preventDefault();
+                              var hash = this.hash;
+          
+                              $('html, body').animate({
+                                  scrollTop: $(hash).offset().top
+                              }, 800, function() {
+                                  window.location.hash = hash;
+                              });
+                          }
+                      });
+                  });</script>
+               
+              </div>
+          </nav>
+        </header>
+        <!--top-->
+      <div class="scrollTop" onclick="scrollToTop()"><i class="fa-sharp fa-solid fa-arrow-up-long" style="color: #000000;padding-top: 12px; padding-left: 14px;font-size: 30px; "></i></div>
+      <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            var scroll = document.querySelector('.scrollTop');
+            scroll.classList.toggle("active" , window.scrollY > 500)
+        })
+        
+        function scrollToTop(){
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth'
+            })
+        }
+            </script>
+      
+      <!--top-->  
+        <div class="container-fluid" style="background-color: #f5f5f50a; height: 200px;">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+     
+     <h1 style="position: relative; text-align: center;margin-top: 60px;">VIDEOS</h1>
+       
+              </div>
+            </div>
+          </div>
+<!--
+          <div class="content">
+            
+            <h1 style="text-align: center; font-size: 30px; margin: 50px;">ALL HUBBLE VIDEOS</h1>
+           
+            <div class="video-gallery">
+              <div class="gallery-item">
+                <video src="https://stsci-opo.org/STScI-01H2XDP62RE4PV8VDME6J7M1JK.mp4"></video>
+                <div class="gallery-item-caption">
+                  <div>
+                    <h2>Stephan's Quintet</h2>
+                    <p>June 20, 2023 10:00AM (EDT)</p>
+                    <div class="playicon">
+                        <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+                </div>
+                  </div>
+                  <a data-fancybox="video-gallery"  class="vimeo-popup" href="https://stsci-opo.org/STScI-01H2XDP62RE4PV8VDME6J7M1JK.mp4"></a>
+                </div>
+              </div>
+          
+              <div class="gallery-item ">
+                <video src="https://vod-progressive.akamaized.net/exp=1691150581~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3687%2F23%2F593438027%2F2796050518.mp4~hmac=e5bce3729e7e49649b15f8748379aa5904123fa98736c453cb97813a8619fb88/vimeo-prod-skyfire-std-us/01/3687/23/593438027/2796050518.mp4"></video>
+                <div class="gallery-item-caption">
+                  <div>
+                    <h2>Zoom to NGC 1333</h2>
+                    <p>April 20, 2023 10:00AM (EDT)</p>
+                    <div class="playicon">
+                        <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+                </div>
+                  </div>
+                  <a data-fancybox="video-gallery"  class="vimeo-popup" href="https://vod-progressive.akamaized.net/exp=1691150581~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3687%2F23%2F593438027%2F2796050518.mp4~hmac=e5bce3729e7e49649b15f8748379aa5904123fa98736c453cb97813a8619fb88/vimeo-prod-skyfire-std-us/01/3687/23/593438027/2796050518.mp4"></a>
+                </div>
+              </div>
+          
+              <div class="gallery-item">
+                <video src="https://stsci-opo.org/STScI-01FJMPRTFXG82AX6WZA8Y939MC.mp4"></video>
+                <div class="gallery-item-caption">
+                  <div>
+                    <h2>Carbon Star CW</h2>
+                    <p>October 28, 2021 11:00AM (EDT)</p>
+                    <div class="playicon">
+                        <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+                </div>
+                  </div>
+                  <a data-fancybox="video-gallery"  class="vimeo-popup" href="https://stsci-opo.org/STScI-01FJMPRTFXG82AX6WZA8Y939MC.mp4"></a>
+                </div>
+              </div>
+          
+              <div class="gallery-item">
+                <video src="https://stsci-opo.org/STScI-01EVS1ECHP2BTC1EMVJQ12QXHE.mp4"></video>
+                <div class="gallery-item-caption">
+                  <div>
+                    <h2>Time-Lapse of Fading</h2>
+                    <p>October 01, 2020 10:00AM (EDT)</p>
+                    <div class="playicon">
+                        <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+                </div>
+                  </div>
+                  <a data-fancybox="video-gallery"  class="vimeo-popup" href="https://stsci-opo.org/STScI-01EVS1ECHP2BTC1EMVJQ12QXHE.mp4"></a>
+                </div>
+              </div>
+<!--next
+<div class="gallery-item">
+    <video src="https://stsci-opo.org/STScI-01EVS3HMBERCXR40HNHY3X9RYW.mp4"></video>
+    <div class="gallery-item-caption">
+      <div>
+        <h2>Zoom into the Serpens Nebula</h2>
+        <p>October 31, 2018 1:00PM (EDT)</p>
+        <div class="playicon">
+            <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+    </div>
+      </div>
+      <a data-fancybox="video-gallery"  class="vimeo-popup" href="https://stsci-opo.org/STScI-01EVS3HMBERCXR40HNHY3X9RYW.mp4"></a>
+    </div>
+  </div>
+
+  <div class="gallery-item ">
+    <video src="https://stsci-opo.org/STScI-01EVS1S11EEB20H6G3YJNAXV1W.mp4"></video>
+    <div class="gallery-item-caption">
+      <div>
+        <h2>Cosmic Reef Visualization</h2>
+        <p>April 24, 2020 7:00AM (EDT)</p>
+        <div class="playicon">
+            <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+    </div>
+      </div>
+      <a data-fancybox="video-gallery" class="vimeo-popup" href="https://stsci-opo.org/STScI-01EVS1S11EEB20H6G3YJNAXV1W.mp4"></a>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <video src="https://stsci-opo.org/STScI-01EVSE9AT2437MDBRJ65E4SX84.mp4"></video>
+    <div class="gallery-item-caption">
+      <div>
+        <h2>Galaxy Dark Matter</h2>
+        <p>March 28, 2018 1:00PM (EDT)</p>
+        <div class="playicon">
+            <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+    </div>
+      </div>
+      <a data-fancybox="video-gallery" class="vimeo-popup" href="https://stsci-opo.org/STScI-01EVSE9AT2437MDBRJ65E4SX84.mp4"></a>
+    </div>
+  </div>
+
+  <div class="gallery-item">
+    <video src="https://stsci-opo.org/STScI-01EVS1V3MP3AM586YYKFMVFR11.mp4"></video>
+    <div class="gallery-item-caption">
+      <div>
+        <h2>Zoom into UGC 2885</h2>
+        <p>January 05, 2020 3:15PM (EST)</p>
+        <div class="playicon">
+            <i class="fa-sharp fa-solid fa-circle-play fa-2xl" style="color: #ffffff7d;"></i>
+    </div>
+      </div>
+      <a data-fancybox="video-gallery" class="vimeo-popup" href="https://stsci-opo.org/STScI-01EVS1V3MP3AM586YYKFMVFR11.mp4"></a>
+    </div>
+  </div>
+
+          
+            </div>
+          </div> <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>      
+-->
+<div class="container">
+  <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="thumbnail">
+              <a data-fancybox="video-gallery" href="video/video1.mp4"><video style="width: 350px; height: auto;" src="video/video1.mp4"></video>
+              <div class="overlay1">
+                <h6 class="thumbnailh6">Take a Tour of NGC 1333</h6>
+              </div>
+            </a>
+            </div>
+            
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="thumbnail">
+            <a data-fancybox="video-gallery" href="video/video2.mp4"><video style="width: 350px; height: auto;" src="video/video2.mp4"></video>
+            <div class="overlay1">
+              <h6 class="thumbnailh6">Mini-Neptune TOI 560.01 Animation</h6>
+            </div>
+          </a>
+          </div>
+          
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="thumbnail">
+          <a data-fancybox="video-gallery" href="video/video3.mp4"><video style="width: 350px; height: auto;" src="video/video3.mp4"></video>
+          <div class="overlay1">
+            <h6 class="thumbnailh6">Returns to Namesake's Discovery</h6>
+          </div>
+        </a>
+        </div>
+        
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="thumbnail">
+        <a data-fancybox="video-gallery" href="video/video4.mp4"><video style="width: 350px; height: auto;" src="video/video4.mp4"></video>
+        <div class="overlay1">
+          <h6 class="thumbnailh6">Planet Debris Falling onto a White Dwarf</h6>
+        </div>
+      </a>
+      </div>
+      
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <div class="thumbnail">
+      <a data-fancybox="video-gallery" href="video/video5.mp4"><video style="width: 350px; height: auto;" src="video/video5.mp4"></video>
+      <div class="overlay1">
+        <h6 class="thumbnailh6">Lagoon Nebula (3D Pans)</h6>
+      </div>
+    </a>
+    </div>
+    
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="thumbnail">
+    <a data-fancybox="video-gallery" href="video/video6.mp4"><video style="width: 350px; height: auto;" src="video/video6.mp4"></video>
+    <div class="overlay1">
+      <h6 class="thumbnailh6">Cosmic Reef Pan Video</h6>
+    </div>
+  </a>
+  </div>
+  
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="thumbnail">
+  <a data-fancybox="video-gallery" href="video/video7.mp4"><video style="width: 350px; height: auto;" src="video/video7.mp4"></video>
+  <div class="overlay1">
+    <h6 class="thumbnailh6">Zoom into Galactic Bulge</h6>
+  </div>
+</a>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="thumbnail">
+<a data-fancybox="video-gallery" href="video/video8.mp4"><video style="width: 350px; height: auto;" src="video/video8.mp4"></video>
+<div class="overlay1">
+  <h6 class="thumbnailh6">Dual Quasars' Blinking Light</h6>
+</div>
+</a>
+</div>
+
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="thumbnail">
+<a data-fancybox="video-gallery" href="video/video9.mp4"><video style="width: 350px; height: auto;" src="video/video9.mp4"></video>
+<div class="overlay1">
+  <h6 class="thumbnailh6">NGC 3314 Zoom Sequence (with Music)</h6>
+</div>
+</a>
+</div>
+
+</div>
+  </div>
+</div>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+          <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="nextbtn">
+                    <button class="btn btn-outline-success" type="submit">next &raquo;</button>
+                  </div>
+                 
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="section bg-footer">
+  <div class="container">
+      <div class="row">
+      
+          <div class="col-lg-3 col-md-12 col-sm-12" style="text-align: center;">
+                 <a style="text-decoration: none;" href="about.html"><h6 class="foot-menu">About Us</h6></a>
+          </div>
+
+          <div class="col-lg-3 col-md-12 col-sm-12" style="text-align: center;">
+                  <a style="text-decoration: none;" href="contact.html"><h6 class="foot-menu">Contact Us</h6></a>
+          </div>
+
+          <div class="col-lg-3 col-md-12 col-sm-12" style="text-align: center;">
+                  <a style="text-decoration: none;" href="https://hubblesite.org/privacy"><h6 class="foot-menu">Privacy Policy</h6></a>
+                  
+          </div>
+
+          <div class="col-lg-3 col-md-12 col-sm-12" style="text-align: center;">
+                  <a style="text-decoration: none;" href="https://hubblesite.org/copyright"><h6 class="foot-menu">copyrigth</h6></a>
+                  
+          </div>
+          
+      </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <div class="mt-5">
+      <ul class="list-inline">
+        <a  href="https://www.facebook.com/HubbleTelescope/"><i class="fa-brands fa-facebook fa-lg" style="padding: 10px;"></i></a>
+        <a href="https://twitter.com/HubbleTelescope"><i class="fa-brands fa-twitter fa-lg" style="padding: 10px;"></i></a>
+        <a href="https://www.instagram.com/space_telescopes/"><i class="fa-brands fa-instagram fa-lg" style="padding: 10px;"></i></a>
+        <a href="https://www.youtube.com/user/HubbleSiteChannel"><i class="fa-brands fa-youtube fa-lg" style="padding: 10px;"></i></a>
+      </ul>
+  </div>
+      <p class="footer-alt mb-0 f-14" style="margin: 30px;">2023 © hubblesite, All Rights Reserved</p>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
